@@ -15,16 +15,6 @@ The second part consists in creating a delimitation between the "useful" parts o
 - Python 3.11
 - Python libraries: see requirements.txt
 
-### Instructions
-
-Clone the repository and install the necessary dependencies:
-
-```bash
-git clone <repository_url>
-cd Custom_colormaps
-pip install -r requirements.txt
-```
-
 ## Usage
 
 ### 1. ReBaD - Defining a set of colormaps
