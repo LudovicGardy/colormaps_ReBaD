@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable, axes_size
-from matplotlib.colors import ListedColormap
 
 from modules.plot_utils import create_image
 
@@ -30,8 +29,7 @@ def show_all_available_colormaps(HaReBaD_color_matrix_upper, all_colormaps):
     cax.set_xticks([]) 
 
 # Fonction pour afficher un exemple individuel
-def show_individual_example(HaReBaD_color_matrix_upper, color_map_i, ax):
-    color_map = ListedColormap(HaReBaD_color_matrix_upper[:, color_map_i, :][::-1])
+def show_individual_example(color_map, ax):
 
     #- Create image
     custom_image_shape = create_image()
@@ -47,18 +45,3 @@ def show_individual_example(HaReBaD_color_matrix_upper, color_map_i, ax):
     cax = divider.append_axes("right", size=height, pad=pad)
     cax.tick_params(axis='both', which='major')
     plt.colorbar(img, cax=cax, orientation="vertical")
-
-    return color_map
-
-def show_multiple_examples(HaReBaD_color_matrix_upper):
-    f, ax = plt.subplots(4, 4, figsize=(10,10))
-    for i in range(4):
-        for j in range(4):
-            color_map_i = i*4+j
-            color_map = show_individual_example(HaReBaD_color_matrix_upper, color_map_i, ax)
-            ax[i,j].set_title(f"Color map {color_map_i}")
-            ax[i,j].set_yticks([])
-            ax[i,j].set_xticks([])
-
-    plt.tight_layout()
-    plt.show()
