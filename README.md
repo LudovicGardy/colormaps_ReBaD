@@ -165,7 +165,7 @@ Contributions are welcome! To contribute:
 
 This project is licensed under the MIT License.
 
-## References
+## Author
 
 - LinkedIn: [Ludovic Gardy](https://www.linkedin.com/in/ludovic-gardy/)
 - Doctoral thesis: [PDF](http://thesesups.ups-tlse.fr/5164/1/2021TOU30190.pdf)
