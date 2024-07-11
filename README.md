@@ -36,6 +36,11 @@ Then (1) create a color map usable by matplotlib from the color matrices obtaine
 #### Quick view of all the available color maps
 
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import make_axes_locatable, axes_size
+from matplotlib.colors import ListedColormap
+
 from modules.colormaps import create_custom_colormatrix_3D, lerp
 from modules.plot_utils import create_cmap, get_all_cmaps
 from modules.interpolation import create_custom_colormatrix_2D
@@ -107,15 +112,15 @@ ax[1].set_xticks([])
 #### Combine the two colormaps in a unique RGBA matrix
 
 ```python
-ReBaD_color_matrix_full = [] #combined_color_matrices
-ReBaD_color_maps_list = [] #combined_color_maps
+ReBaD_color_matrix_full = []  #combined_color_matrices
+ReBaD_color_maps_list = []  #combined_color_maps
 
 for i, w in enumerate(np.arange(0,ReBaD_color_matrix_upper.shape[1])):
 
     cmatrix_dict = {"r": ReBaD_color_matrix_upper[:, w, :][::-1][:, 0],
                     "g": ReBaD_color_matrix_upper[:, w, :][::-1][:, 1],
                     "b": ReBaD_color_matrix_upper[:, w, :][::-1][:, 2]}
-    color_matrix, color_map = create_cmap(cmatrix_dict, combine_two_cmaps)
+    color_matrix, color_map = create_cmap(cmatrix_dict, combine_two_cmaps=True)
     
     ReBaD_color_matrix_full.append(color_matrix)
     ReBaD_color_maps_list.append(color_map)
@@ -160,6 +165,8 @@ Contributions are welcome! To contribute:
 
 This project is licensed under the MIT License.
 
-## Contact
+## References
 
-Ludovic Gardy.
+[Ludovic Gardy](https://www.linkedin.com/in/ludovic-gardy/)
+
+http://thesesups.ups-tlse.fr/5164/1/2021TOU30190.pdf
