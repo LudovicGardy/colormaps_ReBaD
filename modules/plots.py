@@ -45,3 +45,21 @@ def show_individual_example(color_map, ax):
     cax = divider.append_axes("right", size=height, pad=pad)
     cax.tick_params(axis='both', which='major')
     plt.colorbar(img, cax=cax, orientation="vertical")
+
+    # Retirer les étiquettes des axes
+    ax.xaxis.label.set_visible(False)
+    ax.yaxis.label.set_visible(False)
+    cax.xaxis.label.set_visible(False)
+    cax.yaxis.label.set_visible(False)
+
+    # Retirer les ticks des axes
+    ax.set_xticks([])
+    ax.set_yticks([])
+    cax.set_xticks([])
+    cax.set_yticks([])
+
+    # Retirer les titres des axes
+    ax.set_xlabel('')
+    ax.set_ylabel('')
+    cax.set_xlabel('')
+    cax.set_ylabel('')
