@@ -17,14 +17,12 @@ The second part consists in creating a delimitation between the "useful" parts o
 
 ## Usage
 
-### 1. ReBaD - Defining a set of colormaps
-
+### ReBaD - Defining a set of colormaps
 Generate a 3-dimensional space (shape = [cmap_length, n_cmaps, rgb]) containing _**`n`**_ color matrices. _**`n`**_ is the amount of colors chosen by the user. Here it will be five colors : blue, cyan, red, yellow and red.
 
 Then (1) create a color map usable by matplotlib from the color matrices obtained using the previous definitions; (2) obtain the color bar of all the colors available in the 3-dimensional space of the color maps; (3) generate an image that we will use to illustrate the variation of the available colors on concreate examples.
 
 #### Quick view of all the available color maps
-
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -46,7 +44,6 @@ show_all_available_colormaps(ReBaD_color_matrix_upper, all_colormaps)
 ![available colormaps](images/image1.png)
 
 #### Application on some examples
-
 Apply a linear variation of _**`w`**_ to pick a color map in the 3D color matrix.
 
 ```python
@@ -65,7 +62,6 @@ plt.show()
 ![set of examples](images/image2.png)
 
 #### Combine two colormaps: one for low-mid power, the other for high power
-
 Generate a customizable color matrix in 2 dimensions (shape = [cmap_length, rgb]). This color matrix can be concatenated with an _**`i`**_ color matrix of the 3 dimensional space defined previously. The assembly of these color matrices allows to create the delineation and the "transparency" effect around the high intensity pixels of the image.
 
 ```python
@@ -100,7 +96,6 @@ ax[1].set_xticks([])
 ![two ocolor maps](images/image3.png)
 
 #### Combine the two colormaps in a unique RGBA matrix
-
 ```python
 ReBaD_color_matrix_full = []  #combined_color_matrices
 ReBaD_color_maps_list = []  #combined_color_maps
@@ -123,7 +118,6 @@ print(f"corresponding to {ReBaD_color_matrix_full.shape[0]} color maps of length
 ```
 
 #### Application on some examples 
-
 ```python
 fig, axes = plt.subplots(4, 4, figsize=(20, 20))
 
@@ -142,6 +136,5 @@ plt.show()
 ![two ocolor maps](images/image4.png)
 
 ## Author
-
 - LinkedIn: [Ludovic Gardy](https://www.linkedin.com/in/ludovic-gardy/)
 - Doctoral thesis: [PDF](http://thesesups.ups-tlse.fr/5164/1/2021TOU30190.pdf)
