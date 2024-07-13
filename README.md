@@ -1,21 +1,23 @@
 # ReBaD set of colormaps
 
-## Description
-
+## 📄 Description
 The method presented here has been developed to enhance the representation of Fast Ripples (FR) in time-frequency space (scalograms). This method is called ReBaD for "Referential Based Delineated" colormaps. It is divided into two parts.
 
 The first part is based on Shepard's inverse distance, with the aim of coloring portions of high relative magnitude in the image. The magnitude within each scalogram is compared to a reference obtained by calculating the scalograms of thousunds FR recorded on hybrid (macro/micro) intracerebal EEG (iEEG) of drug resistant epileptic patients. The higher the magnitude of an event compared to this reference, the warmer its color.
 
 The second part consists in creating a delimitation between the "useful" parts of the signal, i.e. those with oscillations strongly represented in the frequency bands of interest, and the "inactive" parts, i.e. those where the frequency distribution is rather homogeneous.
 
-## Installation
+## ⚒️ Installation
 
 ### Prerequisites
-
 - Python 3.11
-- Python libraries: see requirements.txt
+- Python libraries
+    ```sh
+    pip install -r requiremetns_local.txt  # for PyQt6 GUI, and/or,
+    pip install -r requiremetns_web.txt  # for Web GUI
+    ```
 
-## Usage
+## 📝 Usage
 
 ### ReBaD - Defining a set of colormaps
 Generate a 3-dimensional space (shape = [cmap_length, n_cmaps, rgb]) containing _**`n`**_ color matrices. _**`n`**_ is the amount of colors chosen by the user. Here it will be five colors : blue, cyan, red, yellow and red.
@@ -135,6 +137,6 @@ plt.show()
 
 ![two ocolor maps](images/image4.png)
 
-## Author
+## 👤 Author
 - LinkedIn: [Ludovic Gardy](https://www.linkedin.com/in/ludovic-gardy/)
 - Doctoral thesis: [PDF](http://thesesups.ups-tlse.fr/5164/1/2021TOU30190.pdf)
