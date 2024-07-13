@@ -13,8 +13,7 @@ The second part consists in creating a delimitation between the "useful" parts o
 - Python 3.11
 - Python libraries
     ```sh
-    pip install -r requiremetns_local.txt  # for PyQt6 GUI, and/or,
-    pip install -r requiremetns_web.txt  # for Web GUI
+    pip install -r requirements.txt
     ```
 
 ## 📝 Usage
