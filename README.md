@@ -136,6 +136,9 @@ plt.show()
 
 ![two ocolor maps](images/image4.png)
 
+#### Summary figure and real application
+![two ocolor maps](images/image5.png)
+
 ## 👤 Author
 - LinkedIn: [Ludovic Gardy](https://www.linkedin.com/in/ludovic-gardy/)
 - Doctoral thesis: [PDF](http://thesesups.ups-tlse.fr/5164/1/2021TOU30190.pdf)
