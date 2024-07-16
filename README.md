@@ -8,7 +8,7 @@ The first part is based on Shepard's inverse distance, with the aim of coloring 
 The second part consists in creating a delimitation between the "useful" parts of the signal, i.e. those with oscillations strongly represented in the frequency bands of interest, and the "inactive" parts, i.e. those where the frequency distribution is rather homogeneous.
 
 #### Summary figure
-![two ocolor maps](images/image1.png)
+![](images/image1.png)
 
 ## ⚒️ Installation
 
@@ -45,7 +45,7 @@ all_colormaps = get_all_cmaps(ReBaD_color_matrix_upper)
 show_all_available_colormaps(ReBaD_color_matrix_upper, all_colormaps)
 ```
 
-![available colormaps](images/image2.png)
+![](images/image2.png)
 
 #### Application on some examples
 Apply a linear variation of _**`w`**_ to pick a color map in the 3D color matrix.
@@ -63,7 +63,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![set of examples](images/image3.png)
+![](images/image3.png)
 
 #### Combine two colormaps: one for low-mid power, the other for high power
 Generate a customizable color matrix in 2 dimensions (shape = [cmap_length, rgb]). This color matrix can be concatenated with an _**`i`**_ color matrix of the 3 dimensional space defined previously. The assembly of these color matrices allows to create the delineation and the "transparency" effect around the high intensity pixels of the image.
@@ -97,7 +97,7 @@ ax[1].set_yticks([])
 ax[1].set_xticks([])
 ```
 
-![two ocolor maps](images/image4.png)
+![](images/image4.png)
 
 #### Combine the two colormaps in a unique RGBA matrix
 ```python
@@ -137,7 +137,7 @@ plt.tight_layout()
 plt.show()        
 ```
 
-![two ocolor maps](images/image5.png)
+![](images/image5.png)
 
 ## 👤 Author
 - LinkedIn: [Ludovic Gardy](https://www.linkedin.com/in/ludovic-gardy/)
