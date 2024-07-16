@@ -4,6 +4,7 @@ __pycache__
 .venv/
 .mypy_cache/
 .idea/
+pptx/
 
 ### Ignore these files
 test.py
