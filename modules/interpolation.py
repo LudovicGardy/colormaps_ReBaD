@@ -2,7 +2,7 @@ import numpy as np
 
 from modules.colormaps import lerp
 
-def create_custom_colormatrix_2D(cmap_length=600, verbose = True):
+def create_custom_colormatrix_2D(cmap_length: int=600, verbose: bool=True):
     '''
     Remake of Christophe Hurter's javascript implementation
     of the interpolation between <n> colors (two or more).

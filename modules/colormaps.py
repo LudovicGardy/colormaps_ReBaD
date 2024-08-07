@@ -2,19 +2,19 @@ import math
 import numpy as np
 import pandas as pd
 
-def getRandomInt(max):
+def getRandomInt(max: int):
     return math.floor(np.random.random() * max)
 
-def getRandomIntHex(max):
+def getRandomIntHex(max: int):
     return hex(math.floor(np.random.random() * max))[2:]
 
-def lerp(inter, v0, v1):
+def lerp(inter: float, v0: float, v1: float):
     return math.floor(inter*v0 + (1-inter)*v1)
 
-def dist(p1, p2):
+def dist(p1: list, p2: list):
     return np.sqrt((p2[0]-p1[0])**2 + (p2[1]-p1[1])**2)
 
-def create_custom_colormatrix_3D(n_cmaps=100, cmap_length=256, power=5):
+def create_custom_colormatrix_3D(n_cmaps: int=100, cmap_length: int=256, power: int=5):
     clientHeight = cmap_length
     clientWidth = n_cmaps
 

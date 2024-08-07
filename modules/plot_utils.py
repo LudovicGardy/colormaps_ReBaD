@@ -3,7 +3,7 @@ from matplotlib.colors import ListedColormap
 
 from modules.interpolation import create_custom_colormatrix_2D
 
-def create_cmap(cmatrix_dict, combine_two_cmaps=True):
+def create_cmap(cmatrix_dict: dict, combine_two_cmaps: bool=True):
     '''
     Create a unique color matrix and color map using two
     concatenated 2D (shape = [cmap_length, rgb]) color maps.
@@ -52,7 +52,7 @@ def create_cmap(cmatrix_dict, combine_two_cmaps=True):
     return(color_matrix, color_map)
 
 
-def get_all_cmaps(HaReBaD_color_matrix_upper):
+def get_all_cmaps(HaReBaD_color_matrix_upper: np.array):
     '''
     Given a list of 3D colormatrices (cmap_length, n_cmaps, rgba), extract the top row (highest values/colors)
     and store them to a 2D list (cmap_length, rgba) to use these colors as a colorbar with all the possible colors
