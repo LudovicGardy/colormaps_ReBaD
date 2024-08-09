@@ -4,7 +4,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable, axes_size
 
 from modules.plot_utils import create_image
 
-def show_all_available_colormaps(HaReBaD_color_matrix_upper: np.array, all_colormaps: object):
+def show_all_available_colormaps(HaReBaD_color_matrix_upper: np.ndarray, all_colormaps: object):
     ### Plot color matrices list
     f, ax = plt.subplots(figsize= (5,5))
 
